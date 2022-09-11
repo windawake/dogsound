@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>狗狗语音识别器</title>
+  <link href="styles/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <script src="scripts/bootstrap.min.js"></script>
+  <link href="styles/app.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="p-2 bg-primary">
+      <h4 class="text-center text-white">我的账号<a href="weixin.html" class="btn btn-sm btn-light float-end">关注我们</a></h4>
+    </header>
+    <div class="jumbotron d-flex min-vh-100 my-4">
+      <section class="container text-center">
+        <p class="alert-primary">系统随机分配账号密码，想要修改或者切换账号，需要如下操作</p>
+        <form id="saveUser" class="row g-3">
+          <div class="mb-3 row">
+            <label for="username" class="col-3 col-form-label">用户名</label>
+            <div class="col-9">
+              <span class="form-control-plaintext text-start" id="username" ></span>
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="nickname" class="col-3 col-form-label">昵称</label>
+            <div class="col-9">
+              <input type="text" class="form-control" id="nickname">
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="password" class="col-3 col-form-label">密码</label>
+            <div class="col-9">
+              <input type="text" class="form-control" id="password">
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <button id="saveUserSubmit" class="btn btn-primary mb-3">修改账号</button>
+          </div>
+        </form>
+        <hr/>
+        <form id="changeUser" class="row g-3 mt-5">
+          <div class="mb-3 row">
+            <label for="loginUser" class="col-3 col-form-label">用户名</label>
+            <div class="col-9">
+              <input type="text" class="form-control" id="loginUser">
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="loginPassword" class="col-3 col-form-label">密码</label>
+            <div class="col-9">
+              <input type="text" class="form-control" id="loginPassword">
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <button id="changeUserSubmit" class="btn btn-primary mb-3">切换登录账号</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </div>
+
+  <nav class="navbar fixed-bottom navbar-light bg-light nav-top-border">
+    <div class="container-fluid">
+      <a id="navRecorder" class="col text-center navbar-brand navbar-brand-rb" href="index.html">录制</a>
+      <a class="col text-center navbar-brand" href="recognize.html">识别</a>
+    </div>
+  </nav>
+
+</body>
+<footer>
+  <script src="scripts/user.js"></script>
+</footer>
+</html>

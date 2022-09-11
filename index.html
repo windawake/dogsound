@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>狗狗语音识别器</title>
+  <link href="styles/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <script src="scripts/bootstrap.min.js"></script>
+  <script src="scripts/jquery.min.js"></script>
+  <link href="styles/app.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="p-2 bg-primary">
+      <h4 class="text-center text-white">录制语音 <a href="user.html" class="btn btn-sm btn-light float-end">账号</a></h4>
+    </header>
+
+    <div class="card">
+      <div class="card-header">
+        我家狗狗录音
+      </div>
+      <ul id="recorderList" class="list-group list-group-flush">
+      </ul>
+      <div class="card-body">
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#recordModal">创建录音</button>
+      </div>
+    </div>
+
+    <!-- 模态框 -->
+    <div class="modal fade" id="recordModal">
+      <div class="modal-dialog fixed-bottom">
+        <div id="recording" class="text-light text-center my-3 d-none">
+          <li class="small m1"></li>
+          <li class="small m2"></li>
+          <li class="small m3"></li>
+          <li class="m1"></li>
+          <li class="m2"></li>
+          <li class="m3"></li>
+          <output>录音中，再次点击结束</output>
+          <li class="m3"></li>
+          <li class="m2"></li>
+          <li class="m1"></li>
+          <li class="small m3"></li>
+          <li class="small m2"></li>
+          <li class="small m1"></li>
+        </div>
+        <div class="modal-content">
+
+          <!-- 模态框头部 -->
+          <div class="modal-header">
+            <button class="btn btn-sm" data-bs-dismiss="modal">关闭</button>
+            <!-- <h4 class="modal-title">点击录音</h4> -->
+            <button class="btn btn-sm" id="recordSubmit">完成</button>
+          </div>
+          <!-- 模态框内容 -->
+          <div class="modal-body">
+            <div class="container">
+              <div class="row text-center">
+                <!-- <div class="my-2">
+                  <span id="dogTap" class="dog-icon btn-primary display-1 rounded-circle h5-select-none"></span>
+                </div> -->
+                <button id="dogTap" class="btn btn-primary my-2">
+                  <span class="dog-icon"></span>
+                  点击录制狗声
+                </button>
+                <div id="soundDogTap">
+                </div>
+              </div>
+              <br><br>
+              <div class="row text-center">
+                <!-- <div class="my-2">
+                  <span id="humanTap" class="human-icon btn-primary display-1 rounded-circle h5-select-none"></span>
+                </div> -->
+                <button id="humanTap" class="btn btn-primary my-2">
+                  <span class="human-icon"></span>
+                  点击录制人声
+                </button>
+                <div id="soundHumanTap">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="recordAlert" class="alert alert-warning record-alert-fixed d-none" role="alert"></div>
+
+  <nav class="navbar fixed-bottom navbar-light bg-light nav-top-border">
+    <div class="container-fluid">
+      <a class="col text-center navbar-brand navbar-brand-rb" href="index.html">录制</a>
+      <a class="col text-center navbar-brand" href="recognize.html">识别</a>
+    </div>
+  </nav>
+</body>
+<footer>
+  <script src="scripts/recorder.core.js"></script>
+  <script src="scripts/recorder.js"></script>
+  <script src="scripts/record-list.js"></script>
+</footer>
+
+</html>

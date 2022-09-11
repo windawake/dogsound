@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>狗狗语音识别器</title>
+  <link href="styles/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <script src="scripts/bootstrap.min.js"></script>
+  <link href="styles/app.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="p-2 bg-primary">
+      <h4 class="text-center text-white">识别狗声<a href="weixin.html" class="btn btn-sm btn-light float-end">关注我们</a></h4>
+    </header>
+    <div class="jumbotron d-flex align-items-center min-vh-100">
+      <div class="container text-center">
+        <div id="recAlert" class="alert alert-info rec-alert-fixed d-none" role="alert"></div>
+        <p>点击下面按钮，然后狗狗对着手机发出声音，马上回复消息</p><br>
+        <span id="dogRec" class="dog-icon btn-primary rounded-circle rec-icon user-select-none"></span>
+        <div id="soundDogRec" class="d-none">
+        </div>
+        <div id="replyDogRec" class="d-none">
+        </div>
+        <div id="recognizing" class="text-secondary text-center my-3 d-none">
+          <li class="small m1"></li>
+            <li class="small m2"></li>
+            <li class="small m3"></li>
+            <li class="m1"></li>
+            <li class="m2"></li>
+            <li class="m3"></li>
+            <output>采样中，再次点击结束</output>
+            <li class="m3"></li>
+            <li class="m2"></li>
+            <li class="m1"></li>
+            <li class="small m3"></li>
+            <li class="small m2"></li>
+            <li class="small m1"></li>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar fixed-bottom navbar-light bg-light nav-top-border">
+    <div class="container-fluid">
+      <a class="col text-center navbar-brand navbar-brand-rb" href="index.html">录制</a>
+      <a class="col text-center navbar-brand" href="recognize.html">识别</a>
+    </div>
+  </nav>
+
+</body>
+<footer>
+  <script src="scripts/recorder.core.js"></script>
+  <script src="scripts/recognize.js"></script>
+</footer>
+
+</html>

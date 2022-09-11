@@ -1,0 +1,10 @@
+.git
+.htaccess
+favicon.ico
+php/tests
+storage/files/recognizer/*
+storage/files/recorder/*
+storage/logs/*
+app.json
+.vscode
+testRecord.php

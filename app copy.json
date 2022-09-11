@@ -1,0 +1,11 @@
+{
+    "mysql":{
+        "host": "127.0.0.1:3306",
+        "dbname": "bowwow",
+        "user": "root",
+        "password": "123456"
+    },
+    "recognize": {
+        "fileStore": true
+    }
+}
